@@ -74,7 +74,7 @@ let bestScore = JSON.parse(localStorage.getItem('Best Score')) || Infinity;
 function handleCardClick(event) {
     // If there are already two cards flipped, or the clicked card is already flipped, return early.
    currentScore++;
-   counter.textContent = `Score ${currentScore}`;
+   counter.textContent = `Number of tries ${currentScore}`;
   
   if (flippedCards.length === 2 || flippedCards.includes(event.target)) {
     return;
@@ -128,7 +128,7 @@ function startGame(e) {
    e.preventDefault();
    restartButton.style.display = 'none';
    currentScore = 0;
-   counter.textContent = `Score ${currentScore}`;
+   counter.textContent = `Number of tries ${currentScore}`;
   bestScoreBtn.textContent = `Best Score ${bestScore === Infinity ? 0 : bestScore}`;
   
 }
